@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>今井研究室</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="今井順一の研究室紹介">
+	<meta name="keywords" content="千葉工業大学,研究室,今井順一,機械学習">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="alternate stylesheet" href="css/change.css" title="change">
+	<link rel="stylesheet" href="css/test.css">
+	<script src="js/openclose.js"></script>
+	<script src="js/fixmenu.js"></script>
+	<script src="js/fixmenu_pagetop.js"></script>
+	<script src="js/ddmenu_min.js"></script>
+	<script src="js/styleswitcher.js"></script>
+</head>
+
+
+<body>
+
+	<div id="container">
+
+		<header>
+			<h1 id="logo" class="index_logo"><a href="index.html">今井研究室</a></h1>
+			<p>千葉工業大学 情報変革科学部 認知情報科学科 / 情報科学部 情報工学科</p>
+		</header>
+
+		<!--PC用（901px以上端末）メニュー-->
+		<div class="nav-fix-pos">
+			<nav id="menubar">
+				<ul>
+					<li><a href="index.html">トップページ<span>Index</span></a></li>
+					<li><a href="research.html">研究内容<span>Research</span></a>
+						<ul class="ddmenu">
+							<li><a href="research1.html">学生研究テーマ<br>(最新3年度)</a></li>
+							<li><a href="research2.html">学習研究テーマ<br>(全リスト)</a></li>
+						</ul>
+					</li>
+					<li class="current"><a href="member.html">メンバー<span>Members</span></a>
+						<ul class="ddmenu">
+							<li><a href="member1.html">教員</a></li>
+							<li><a href="member2.html">学生</a></li>
+							<li><a href="member3.html">修了生・卒業生</a></li>
+						</ul>
+					</li>
+					<li><a href="publication.html">研究業績<span>Publications</span></a>
+						<ul class="ddmenu">
+							<li><a href="publication1.html">原著論文</a></li>
+							<li><a href="publication2.html">国際会議</a></li>
+							<li><a href="publication3.html">国内研究会・大会等</a></li>
+							<li><a href="publication.html#tokkyo">特許/外部資金獲得/その他</a></li>
+						</ul>
+					</li>
+					<li><a href="award.html">受賞<span>Awards</span></a></li>
+					<li><a href="subject.html">担当科目<span>Subjects</span></a></li>
+					<li><a href="link.html">リンク<span>Links</span></a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<!--小さな端末用（900px以下端末）メニュー-->
+		<nav id="menubar-s">
+			<ul>
+				<li><a href="index.html">トップページ<span>Index</span></a></li>
+				<li><a href="research.html">研究内容<span>Research</span></a></li>
+				<li><a href="member.html">メンバー<span>Members</span></a></li>
+				<li><a href="publication.html">研究業績<span>Publications</span></a></li>
+				<li><a href="award.html">受賞<span>Awards</span></a></li>
+				<li><a href="subject.html">担当科目<span>Subjects</span></a></li>
+				<li><a href="link.html">リンク<span>Links</span></a></li>
+			</ul>
+		</nav>
+
+		<div id="contents">
+
+			<ul class="nav">
+				<li><a href="index.html">トップページ</a></li>
+				<li>メンバー</li>
+			</ul>
+
+			<div id="main">
+
+				<section>
+
+					<h2>メンバー</h2>
+
+					<ul class="disc">
+						<li><a href="member1.html">教員</a></li>
+						<li><a href="member2.html">学生</a></li>
+						<li><a href="member3.html">修了生・卒業生</a></li>
+						
+					</ul>
+					<p><img src="今井研/集合写真.jpg" alt="" class="fl w40p"></p>
+
+				</section>
+
+
+
+				<!--ページの上部に戻る「↑」ボタン-->
+				<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+				<!-- メニュー開閉ボタン -->
+				<div id="menubar_hdr" class="close"></div>
+
+				<!-- メニュー本体（初期状態で非表示）-->
+				<nav id="menubar-s" style="display: none;">
+					<ul>
+						<li><a href="#">メニュー1</a></li>
+						<li><a href="#">メニュー2</a></li>
+					</ul>
+				</nav>
+
+				<!-- 開閉スクリプト -->
+				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						const trigger = document.getElementById("menubar_hdr");
+						const menu = document.getElementById("menubar-s");
+
+						menu.style.display = "none"; // 念のため初期化
+
+						trigger.addEventListener("click", function () {
+							if (window.innerWidth <= 900) {
+								const isOpen = menu.style.display === "block";
+								menu.style.display = isOpen ? "none" : "block";
+								trigger.classList.toggle("open", !isOpen);
+								trigger.classList.toggle("close", isOpen);
+							}
+						});
+					});
+				</script>
+			</div>
+		</div>
+	</div>
+
+
+	<footer>
+
+		<div class="inner">
+
+			<section class="half fl">
+				<h2>所在地</h2>
+				<p>〒275-0016<br>
+					千葉県習志野市津田沼2-17-1<br>
+					千葉工業大学 情報変革科学部 認知情報科学科<br>
+					（津田沼キャンパス 7号館9階 認知情報科学科オフィス070915、ラボ070914）</p>
+				<p>[<a href="http://www.it-chiba.ac.jp/institute/access/">交通案内</a>]
+					[<a href="http://www.it-chiba.ac.jp/institute/campus/tsudanuma/">津田沼キャンパス案内</a>]</p>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.520989101151!2d140.01957131525904!3d35.68879498019248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQxJzE5LjciTiAxNDDCsDAxJzE4LjMiRQ!5e0!3m2!1sja!2sjp!4v1534845765085"
+					width="540" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</section>
+
+		</div>
+		<!--/.inner-->
+
+		<div id="copyright">
+			<small>Copyright (C) 2010-2025 Imai Lab. All Rights Reserved.</small>
+			<p>作成者:25G2012 池田莉里花</p>
+		</div>
+
+	</footer>
+</body>
+
+</html>

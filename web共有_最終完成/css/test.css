@@ -1,0 +1,57 @@
+header a {
+  text-decoration: none;
+}
+
+.index_logo {
+  font-size: 300%;
+  /* font-family: ; */
+}
+
+.list_li {
+  list-style: circle;
+  margin-left: 30px;
+}
+
+.space_div {
+  padding-left: 20px;
+}
+
+#years {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#years li {
+  margin-left: 10px;
+}
+
+/* #years li a {
+  text-decoration: none;
+} */
+
+#years_list {
+  background-color: #eee;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1.5px solid;
+}
+
+/* .soturon_li {
+  list-style: circle;
+} */
+
+.text h4 {
+  margin-bottom: 10px;
+}
+
+/* #main h2 {
+  scroll-margin-top: 90px;
+} */
+
+.box h3 {
+  scroll-margin-top: 90px;
+} 
+
+.text h3{
+  scroll-margin-top: 90px;
+}
