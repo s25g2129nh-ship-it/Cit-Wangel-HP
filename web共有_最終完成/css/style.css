@@ -1058,8 +1058,91 @@ footer address .tel {
 	width: 100px;
 }
 
+}
+/*↑ここが「画面幅480px以下の設定」の本来の閉じ括弧（抜けていた）*/
+
+/*ニュース横の小さいプロフィールカード*/
+.top-row {
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+.top-row #new {
+	flex: 1;
+	min-width: 0;
+}
+.profile-card {
+	width: 220px;
+	flex-shrink: 0;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.profile-card-icon {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+.profile-card-title {
+	font-size: 16px;
+	margin-bottom: 8px;
+}
+.profile-card-text {
+	font-size: 13px;
+	color: #666;
+	line-height: 1.6;
+	margin-bottom: 14px;
+}
+.profile-card-sns {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+}
+.profile-card-sns a {
+	display: block;
+	width: 22px;
+	height: 22px;
+}
+.profile-card-sns img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	transition: 0.3s;
+}
+.profile-card-sns a:hover img {
+	opacity: 0.6;
+}
+
+/*プロフィールカード内の見た目をピンポイントで上書き（#main h3とぶつからないように）*/
+.profile-card h3.profile-card-title {
+	clear: none;
+	margin-bottom: 8px;
+	padding: 0;
+	font-size: 16px;
+	border: none;
+	border-radius: 0;
+}
+.profile-card p.profile-card-text {
+	padding: 0;
+	margin-bottom: 14px;
+}
+
+/*スマホ表示（900px以下）では縦積みに*/
+@media screen and (max-width:900px){
+	.top-row {
+		flex-direction: column;
+	}
+	.profile-card {
+		width: 100%;
+	}
+}
+
 /*その他
 ---------------------------------------------------------------------------*/
 .ws,.wl {width: 94%;}
-
-}
