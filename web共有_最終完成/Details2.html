@@ -4,13 +4,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ワンダーフォーゲル同好会</title>
+	<title>活動記録｜千葉工業大学ワンダーフォーゲル同好会</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="今井順一の研究室紹介">
-	<meta name="keywords" content="千葉工業大学,研究室,今井順一,機械学習">
+	<meta name="description" content="千葉工業大学ワンダーフォーゲル同好会の活動記録">
+	<meta name="keywords" content="千葉工業大学,ワンダーフォーゲル,活動記録,登山">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="alternate stylesheet" href="css/change.css" title="change">
-	<link rel="stylesheet" href="css/test.css">
 	<script src="js/openclose.js"></script>
 	<script src="js/fixmenu.js"></script>
 	<script src="js/fixmenu_pagetop.js"></script>
@@ -45,7 +44,7 @@
 		<div class="nav-fix-pos">
 			<nav id="menubar">
 				<ul>
-					<li class="current"><a href="Top.html">トップページ<span>Top</span></a></li>
+					<li><a href="Top.html">トップページ<span>Top</span></a></li>
 					<li><a href="first.html">はじめに<span>Start</span></a>
 						<ul class="ddmenu">
 							<li><a href="Message.html">ファーストメッセージ</a></li>
@@ -53,7 +52,7 @@
 							<li><a href="Q&A.html">Q&A</a></li>
 						</ul>
 					</li>
-					<li><a href="Details.html">活動内容<span>Details</span></a>
+					<li class="current"><a href="Details.html">活動内容<span>Details</span></a>
 						<ul class="ddmenu">
 							<li><a href="Details1.html">活動紹介</a></li>
 							<li><a href="Details2.html">活動記録</a></li>
@@ -91,40 +90,232 @@
 						新しい年度が増えたら、下に <li><a href="#y◯◯◯◯">◯◯◯◯年度</a></li> を1個追加する
 						（数字部分は、下に新しく作る年度セクションの id と揃える）
 					-->
-					<ul class="year-nav">
+						<ul class="year-nav">
 						<li><a href="#y2026">2026年度</a></li>
 						<li><a href="#y2025">2025年度</a></li>
+						<li><a href="#y2023">2023年度</a></li>
+						<li><a href="#y2019">2019年度</a></li>
+						<li><a href="#y2018">2018年度</a></li>
 					</ul>
  
 					<!--
 						★新しい活動を追加するときのルール★
-						・同じ年度に追加する場合：その年度の <dl> の中に <dt>〜</dt><dd>〜</dd> の
-						 1セットをコピーして、一番上に貼り付け、日付・場所・内容を書き換える
+						・同じ年度に追加する場合：その年度の <table> の中の <tr>〜</tr> 1行を
+						 コピーして、一番上（<tbody>の直下）に貼り付け、日付・場所・タグを書き換える
 						・新しい年度になったら：<section class="year-block" id="y◯◯◯◯"> の
 						 ブロックをまるごとコピーして一番上に貼り付け、年度・中身を書き換える
 						 （↑年度ボタン側にもリンクの追加を忘れずに）
+						・日付が不明な活動は、日付のセルに「日付不明」と書けばOK
+ 
+						★内容（活動種別）のタグの書き方★
+						<span class="tag タグの種類">表示したい文字</span> という形で書く。
+						1つの活動に複数タグ（例：ハイキングと登山の両方）をつけてもOK。
+ 
+						タグの種類一覧：
+						tag-climb（登山＝緑） / tag-hike（ハイキング＝青） / tag-ski（スキー・スノボ＝水色）
+						tag-event（新歓・花見・BBQなどのイベント＝ピンク） / tag-other（それ以外＝グレー）
 					-->
  
 					<section class="year-block" id="y2026">
 						<h3>2026年度</h3>
-						<dl>
-							<dt>2026/5/24</dt>
-							<dd>高尾山にて新入生歓迎ワンダリングを行いました。</dd>
- 
-							<dt>2026/3/4</dt>
-							<dd>筑波山にてワンダリングを行いました。</dd>
-						</dl>
+						<table class="records-table">
+							<thead>
+								<tr><th>日付</th><th>場所</th><th>内容</th></tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2026/6/20</td>
+									<td>鎌倉</td>
+									<td><span class="tag tag-hike">ハイキング</span></td>
+								</tr>
+								<tr>
+									<td>2026/5/16</td>
+									<td>高尾山</td>
+									<td><span class="tag tag-climb">登山</span></td>
+								</tr>
+								<tr>
+									<td>2026/4/25</td>
+									<td>お台場</td>
+									<td><span class="tag tag-event">新入生歓迎会</span></td>
+								</tr>
+								<tr>
+									<td>2026/3/23</td>
+									<td>21世紀の森と広場</td>
+									<td><span class="tag tag-event">花見</span></td>
+								</tr>
+								<tr>
+									<td>2026/3/4</td>
+									<td>筑波山</td>
+									<td><span class="tag tag-climb">登山</span></td>
+								</tr>
+								<tr>
+									<td>2026/2/9,10</td>
+									<td>長野</td>
+									<td><span class="tag tag-ski">スキー・スノボ</span></td>
+								</tr>
+								<tr>
+									<td>2026/1/16</td>
+									<td>佐原</td>
+									<td><span class="tag tag-hike">ハイキング</span></td>
+								</tr>
+							</tbody>
+						</table>
 					</section>
  
 					<section class="year-block" id="y2025">
 						<h3>2025年度</h3>
-						<dl>
-							<dt>2025/11/29</dt>
-							<dd>御嶽山付近の渓流にて沢遊び・秋合宿を行いました。</dd>
+						<table class="records-table">
+							<thead>
+								<tr><th>日付</th><th>場所</th><th>内容</th></tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2025/11/29</td>
+									<td>御嶽山</td>
+									<td><span class="tag tag-hike">ハイキング</span></td>
+								</tr>
+								<tr>
+									<td>2025/10/26</td>
+									<td>霜降高原</td>
+									<td><span class="tag tag-climb">登山</span></td>
+								</tr>
+								<tr>
+									<td>2025/9/1,2</td>
+									<td>静岡</td>
+									<td>
+										<span class="tag tag-hike">ハイキング</span>
+										<span class="tag tag-climb">登山</span>
+										<span class="tag tag-other">観光</span>
+									</td>
+								</tr>
+								<tr>
+									<td>2025/8/25</td>
+									<td>秩父・長瀞</td>
+									<td><span class="tag tag-hike">ハイキング</span></td>
+								</tr>
+								<tr>
+									<td>2025/8/7</td>
+									<td>鬼怒川</td>
+									<td><span class="tag tag-other">ライン下り</span></td>
+								</tr>
+								<tr>
+									<td>2025/6/21</td>
+									<td>鎌倉</td>
+									<td><span class="tag tag-hike">ハイキング</span></td>
+								</tr>
+								<tr>
+									<td>2025/5/17</td>
+									<td>高尾山</td>
+									<td><span class="tag tag-climb">登山</span></td>
+								</tr>
+								<tr>
+									<td>2025/4/25,26</td>
+									<td>上野動物園</td>
+									<td><span class="tag tag-event">新入生歓迎会</span></td>
+								</tr>
+								<tr>
+									<td>2025/3/31</td>
+									<td>（場所不明）</td>
+									<td><span class="tag tag-event">花見</span></td>
+								</tr>
+								<tr>
+									<td>2025/2/6</td>
+									<td>冬合宿</td>
+									<td><span class="tag tag-ski">スキー・スノボ</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
  
-							<dt>2025/6/6</dt>
-							<dd>鎌倉にて沢登りを行いました。</dd>
-						</dl>
+					<section class="year-block" id="y2023">
+						<h3>2023年度</h3>
+						<table class="records-table">
+							<thead>
+								<tr><th>日付</th><th>場所</th><th>内容</th></tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2023/11/12</td>
+									<td>御嶽渓谷</td>
+									<td><span class="tag tag-hike">ハイキング</span></td>
+								</tr>
+								<tr>
+									<td>2023/7/17</td>
+									<td>（場所不明）</td>
+									<td><span class="tag tag-event">BBQ</span></td>
+								</tr>
+								<tr>
+									<td>2023/6/25</td>
+									<td>高尾山</td>
+									<td><span class="tag tag-climb">登山</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+ 
+					<section class="year-block" id="y2019">
+						<h3>2019年度</h3>
+						<table class="records-table">
+							<thead>
+								<tr><th>日付</th><th>場所</th><th>内容</th></tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2019/7/8</td>
+									<td>高尾山</td>
+									<td><span class="tag tag-climb">登山</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+ 
+					<section class="year-block" id="y2018">
+						<h3>2018年度</h3>
+						<table class="records-table">
+							<thead>
+								<tr><th>日付</th><th>場所</th><th>内容</th></tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>日付不明</td>
+									<td>高尾山</td>
+									<td><span class="tag tag-climb">登山</span></td>
+								</tr>
+								<tr>
+									<td>日付不明</td>
+									<td>石老山</td>
+									<td><span class="tag tag-climb">登山</span></td>
+								</tr>
+								<tr>
+									<td>日付不明</td>
+									<td>高水三山</td>
+									<td><span class="tag tag-climb">登山</span></td>
+								</tr>
+								<tr>
+									<td>日付不明</td>
+									<td>丹沢</td>
+									<td><span class="tag tag-climb">登山</span></td>
+								</tr>
+								<tr>
+									<td>日付不明</td>
+									<td>冬合宿</td>
+									<td><span class="tag tag-ski">スキー・スノボ</span></td>
+								</tr>
+								<tr>
+									<td>日付不明</td>
+									<td>夏合宿</td>
+									<td>
+										<span class="tag tag-hike">ハイキング</span>
+										<span class="tag tag-other">海</span>
+									</td>
+								</tr>
+								<tr>
+									<td>日付不明</td>
+									<td>津田沼祭</td>
+									<td><span class="tag tag-event">お好み焼き</span></td>
+								</tr>
+							</tbody>
+						</table>
 					</section>
  
 				</section>

@@ -1146,3 +1146,103 @@ footer address .tel {
 /*その他
 ---------------------------------------------------------------------------*/
 .ws,.wl {width: 94%;}
+
+
+/*活動記録ページ（Details2.html）専用スタイル
+---------------------------------------------------------------------------*/
+/*年度ジャンプボタン*/
+.year-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 0 20px 20px;
+}
+.year-nav a {
+	display: inline-block;
+	padding: 8px 20px;
+	background: #7ebb77;
+	color: #fff;
+	border-radius: 20px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: 0.3s;
+}
+.year-nav a:hover {
+	background: #5b9f53;
+	color: #fff;
+}
+
+/*年度ごとのブロック・見出し*/
+.year-block {
+	padding: 0 20px;
+	scroll-margin-top: 20px;	/*ジャンプ直後に見出しが上端ギリギリにならないようにする余白*/
+}
+.year-block h3 {
+	font-size: 120%;
+	font-weight: bold;
+	border-bottom: 2px solid #7ebb77;
+	padding-bottom: 6px;
+	margin-bottom: 10px;
+}
+
+/*活動記録テーブル*/
+.records-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 30px;
+	font-size: 95%;
+}
+.records-table th {
+	background: #f2f2f2;
+	text-align: center;	/*見出しも中央揃え*/
+	padding: 12px 18px;
+	font-weight: bold;
+	border-bottom: 2px solid #ddd;
+}
+.records-table td {
+	padding: 14px 18px;	/*余白を広げて詰まった印象を解消*/
+	text-align: center;	/*日付・場所・内容すべて中央揃え*/
+	border-bottom: 1px solid #eee;
+	vertical-align: middle;
+}
+.records-table td:first-child {
+	white-space: nowrap;
+	width: 120px;
+	color: #666;
+}
+.records-table td:nth-child(2) {
+	width: 180px;
+}
+.records-table tbody tr:nth-child(even) {
+	background: #f9f9f9;
+}
+.records-table tbody tr:hover {
+	background: #eef6ec;
+}
+
+/*活動種別タグ（バッジ）*/
+.tag {
+	display: inline-block;
+	padding: 3px 12px;
+	border-radius: 12px;
+	font-size: 12px;
+	color: #fff;
+	white-space: nowrap;
+	margin: 2px 4px;
+}
+.tag-climb { background: #7ebb77; }	/*登山＝緑*/
+.tag-hike  { background: #5b9bd5; }	/*ハイキング＝青*/
+.tag-ski   { background: #4fc3f7; }	/*スキー・スノボ＝水色*/
+.tag-event { background: #e879a0; }	/*新歓・花見・BBQなどのイベント＝ピンク*/
+.tag-other { background: #999999; }	/*上記に当てはまらないもの＝グレー*/
+
+/*スマホ表示でテーブルがはみ出さないように*/
+@media screen and (max-width:600px){
+	.records-table {
+		font-size: 85%;
+	}
+	.records-table th,
+	.records-table td {
+		padding: 8px 8px;
+	}
+}
