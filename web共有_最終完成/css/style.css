@@ -55,8 +55,63 @@ a:hover {
 /*ヘッダー（ロゴが入った最上段のブロック）
 ---------------------------------------------------------------------------*/
 /*ヘッダーブロック*/
+header {
+	border-bottom: 1px solid #eee;
+}
+.header-inner {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 15px 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
 
+/*左側：アイコン画像＋部名*/
+.header-logo {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.header-logo-img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.header-logo-text h1 {
+	font-size: 20px;
+}
+.header-logo-text h1 a {
+	text-decoration: none;
+	color: #333;
+}
+.header-logo-text p {
+	font-size: 13px;
+	color: #7ebb77;
+	margin-top: 4px;
+}
 
+/*右側：SNSアイコン*/
+.sns-icons {
+	display: flex;
+	gap: 14px;
+}
+.sns-icons a {
+	display: block;
+	width: 26px;
+	height: 26px;
+}
+.sns-icons img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	transition: 0.3s;
+}
+.sns-icons a:hover img {
+	opacity: 0.6;
+}
 
 
 /*文字サイズ変更ボタン（※文字サイズを「大」にした時の設定はchange.cssで行う）
@@ -125,7 +180,7 @@ a:hover {
 	float: left;	/*左に回り込み*/
 	/* メニュー幅（100÷6個=16.66%）　もし４個にするなら100÷4=25%になる。 */
 	/* width: 16.66%; */
-	width: 14.285%;
+	width: 25%;
 	line-height: 1.8;	/*行間を少しだけ狭く*/
 }
 #menubar li a {
@@ -169,7 +224,7 @@ a:hover {
 /*メニューブロック*/
 #menubar ul.ddmenu {
 	position:absolute;visibility: hidden;z-index: 10;
-	width: 14.285%;		/*幅。上の「#menubar li」と合わせる。*/
+	width: 25%;		/*幅。上の「#menubar li」と合わせる。*/
 	border-top: 1px solid #fff;	/*上の線の幅、線種、色*/
 }
 /*メニュー１個あたりの設定*/
@@ -789,6 +844,17 @@ header address {
 	position: static;
 } 
 
+/*スマホ表示（900px以下）でのヘッダー調整*/
+.header-inner {
+	padding: 10px 20px;
+	justify-content: center;
+	text-align: center;
+}
+.header-logo-img {
+	width: 45px;
+	height: 45px;
+}
+
 /*文字サイズ変更ボタン（※文字サイズを「大」にした時の設定はchange.cssで行う）
 ---------------------------------------------------------------------------*/
 /*ボタンブロック全体*/
@@ -992,9 +1058,191 @@ footer address .tel {
 	width: 100px;
 }
 
+}
+/*↑ここが「画面幅480px以下の設定」の本来の閉じ括弧（抜けていた）*/
+
+/*ニュース横の小さいプロフィールカード*/
+.top-row {
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+.top-row #new {
+	flex: 1;
+	min-width: 0;
+}
+.profile-card {
+	width: 220px;
+	flex-shrink: 0;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.profile-card-icon {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+.profile-card-title {
+	font-size: 16px;
+	margin-bottom: 8px;
+}
+.profile-card-text {
+	font-size: 13px;
+	color: #666;
+	line-height: 1.6;
+	margin-bottom: 14px;
+}
+.profile-card-sns {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+}
+.profile-card-sns a {
+	display: block;
+	width: 22px;
+	height: 22px;
+}
+.profile-card-sns img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	transition: 0.3s;
+}
+.profile-card-sns a:hover img {
+	opacity: 0.6;
+}
+
+/*プロフィールカード内の見た目をピンポイントで上書き（#main h3とぶつからないように）*/
+.profile-card h3.profile-card-title {
+	clear: none;
+	margin-bottom: 8px;
+	padding: 0;
+	font-size: 16px;
+	border: none;
+	border-radius: 0;
+}
+.profile-card p.profile-card-text {
+	padding: 0;
+	margin-bottom: 14px;
+}
+
+/*スマホ表示（900px以下）では縦積みに*/
+@media screen and (max-width:900px){
+	.top-row {
+		flex-direction: column;
+	}
+	.profile-card {
+		width: 100%;
+	}
+}
+
 /*その他
 ---------------------------------------------------------------------------*/
 .ws,.wl {width: 94%;}
 
+
+/*活動記録ページ（Details2.html）専用スタイル
+---------------------------------------------------------------------------*/
+/*年度ジャンプボタン*/
+.year-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 0 20px 20px;
+}
+.year-nav a {
+	display: inline-block;
+	padding: 8px 20px;
+	background: #7ebb77;
+	color: #fff;
+	border-radius: 20px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: 0.3s;
+}
+.year-nav a:hover {
+	background: #5b9f53;
+	color: #fff;
 }
 
+/*年度ごとのブロック・見出し*/
+.year-block {
+	padding: 0 20px;
+	scroll-margin-top: 20px;	/*ジャンプ直後に見出しが上端ギリギリにならないようにする余白*/
+}
+.year-block h3 {
+	font-size: 120%;
+	font-weight: bold;
+	border-bottom: 2px solid #7ebb77;
+	padding-bottom: 6px;
+	margin-bottom: 10px;
+}
+
+/*活動記録テーブル*/
+.records-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 30px;
+	font-size: 95%;
+}
+.records-table th {
+	background: #f2f2f2;
+	text-align: center;	/*見出しも中央揃え*/
+	padding: 12px 18px;
+	font-weight: bold;
+	border-bottom: 2px solid #ddd;
+}
+.records-table td {
+	padding: 14px 18px;	/*余白を広げて詰まった印象を解消*/
+	text-align: center;	/*日付・場所・内容すべて中央揃え*/
+	border-bottom: 1px solid #eee;
+	vertical-align: middle;
+}
+.records-table td:first-child {
+	white-space: nowrap;
+	width: 120px;
+	color: #666;
+}
+.records-table td:nth-child(2) {
+	width: 180px;
+}
+.records-table tbody tr:nth-child(even) {
+	background: #f9f9f9;
+}
+.records-table tbody tr:hover {
+	background: #eef6ec;
+}
+
+/*活動種別タグ（バッジ）*/
+.tag {
+	display: inline-block;
+	padding: 3px 12px;
+	border-radius: 12px;
+	font-size: 12px;
+	color: #fff;
+	white-space: nowrap;
+	margin: 2px 4px;
+}
+.tag-climb { background: #7ebb77; }	/*登山＝緑*/
+.tag-hike  { background: #5b9bd5; }	/*ハイキング＝青*/
+.tag-ski   { background: #4fc3f7; }	/*スキー・スノボ＝水色*/
+.tag-event { background: #e879a0; }	/*新歓・花見・BBQなどのイベント＝ピンク*/
+.tag-other { background: #999999; }	/*上記に当てはまらないもの＝グレー*/
+
+/*スマホ表示でテーブルがはみ出さないように*/
+@media screen and (max-width:600px){
+	.records-table {
+		font-size: 85%;
+	}
+	.records-table th,
+	.records-table td {
+		padding: 8px 8px;
+	}
+}

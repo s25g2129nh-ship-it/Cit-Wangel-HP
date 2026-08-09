@@ -32,30 +32,35 @@
 
 /*mainimg
 ---------------------------------------------------------------------------*/
-/*画像ブロック*/
+/*画像ブロック（※枠のサイズをここで固定する）*/
 #mainimg {
 	clear: both;
 	position: relative;
 	width: 100%;
-}
-#mainimg img {
+	aspect-ratio: 16 / 7;	/*枠の横:縦の比率。数字を変えれば枠の高さを調整できる（例：16/9でもう少し低く、4/3で正方形寄りに）*/
+	overflow: hidden;		/*はみ出た部分を隠す*/
 	border-radius: 10px;
+}
+/*４枚共通：枠いっぱいに自動トリミングして表示*/
+#mainimg img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;		/*ここが自動トリミングの肝。縦長でも横長でも枠を埋めるように切り取ってくれる*/
+	border-radius: 10px;
+}
+/*土台画像*/
+.slide0 {
+	position: absolute;
 }
 /*３枚画像の共通設定*/
 .slide1,.slide2,.slide3 {
 	animation-duration: 12s;			/*実行する時間。「s」は秒の事。*/
 	animation-iteration-count:infinite;	/*実行する回数。「infinite」は無限に繰り返す意味。*/
-	position: absolute;
-	left:0px;
-	top:0px;
-	width: 100%;
-	height: auto;
 	animation-fill-mode: both;
 	animation-delay: 2s;
-}
-/*土台画像*/
-.slide0 {
-	position: relative;width: 100%;height: auto;
 }
 /*１枚目*/
 .slide1 {
