@@ -1248,3 +1248,59 @@ footer address .tel {
 		padding: 8px 8px;
 	}
 }
+
+/*スマホ表示でテーブルがはみ出さないように*/
+@media screen and (max-width:600px){
+	.records-table {
+		font-size: 85%;
+	}
+	.records-table th,
+	.records-table td {
+		padding: 8px 8px;
+	}
+}
+
+/* ↓ ここから一番下に貼り付けてください ↓ */
+
+/* --------------------------------------------------
+   リンクページ（Link.html）専用レイアウト設定
+-------------------------------------------------- */
+
+/* 上部写真の配置・表示設定 */
+.link-hero-image {
+	width: 100%;
+	margin-bottom: 25px;
+	text-align: left;
+}
+
+.link-hero-image img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	max-height: 400px;
+	object-fit: cover;
+	border-radius: 8px;
+	display: block;
+}
+
+/* リンク集の左揃え・インデント・文字装飾 */
+#main ul.link-list {
+	list-style-type: disc;
+	padding-left: 25px;
+	margin-bottom: 25px;
+	text-align: left;
+}
+
+#main ul.link-list li {
+	margin-bottom: 6px;
+	text-align: left;
+}
+
+#main ul.link-list li a {
+	color: #333;
+	text-decoration: underline;
+}
+
+#main ul.link-list li a:hover {
+	color: #7ebb77;
+}
