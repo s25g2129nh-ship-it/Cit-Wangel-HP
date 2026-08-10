@@ -38,30 +38,6 @@ a:hover {
 	text-decoration: none;	/*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
 }
 
-/* --------------------------------------------------
-   リンクページ（Link.html）専用カスタマイズ
--------------------------------------------------- */
-
-/* メインエリア内のリスト（リンク集）を左揃えにし、余白を調整 */
-#main ul.disc {
-	text-align: left;
-	padding-left: 20px;
-	margin-bottom: 25px;
-}
-
-/* リンク集の上の写真表示用エリア */
-.link-hero-image {
-	width: 100%;
-	margin-bottom: 25px;
-}
-
-.link-hero-image img {
-	width: 100%;
-	height: auto;
-	max-height: 400px; /* 必要に応じて高さを調整してください */
-	object-fit: cover;
-	border-radius: 10px; /* デザインに合わせた角丸設定 */
-}
 
 
 /*サイトの最大幅の設定
