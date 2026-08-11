@@ -38,6 +38,8 @@ a:hover {
 	text-decoration: none;	/*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
 }
 
+
+
 /*サイトの最大幅の設定
 ---------------------------------------------------------------------------*/
 #container,#menubar,footer .inner {
@@ -1246,3 +1248,38 @@ footer address .tel {
 		padding: 8px 8px;
 	}
 }
+
+/*スマホ表示でテーブルがはみ出さないように*/
+@media screen and (max-width:600px){
+	.records-table {
+		font-size: 85%;
+	}
+	.records-table th,
+	.records-table td {
+		padding: 8px 8px;
+	}
+}
+
+/* ↓ ここから一番下に貼り付けてください ↓ */
+
+/* --------------------------------------------------
+   リンクページ（Link.html）専用レイアウト設定
+-------------------------------------------------- */
+
+/* 上部写真の配置・表示設定 */
+.link-hero-image {
+	width: 100%;
+	margin-bottom: 25px;
+	text-align: left;
+}
+
+.link-hero-image img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	max-height: 400px;
+	object-fit: cover;
+	border-radius: 8px;
+	display: block;
+}
+
