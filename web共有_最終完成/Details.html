@@ -18,7 +18,7 @@
 	<script src="js/styleswitcher.js"></script>
 </head>
 
-<body>
+<body class="c1">
 
 	<div id="container">
 		<header>
@@ -45,7 +45,7 @@
 		<div class="nav-fix-pos">
 			<nav id="menubar">
 				<ul>
-					<li class="current"><a href="Top.html">トップページ<span>Top</span></a></li>
+					<li ><a href="Top.html">トップページ<span>Top</span></a></li>
 					<li><a href="first.html">はじめに<span>Start</span></a>
 						<ul class="ddmenu">
 							<li><a href="Message.html">ファーストメッセージ</a></li>
@@ -53,7 +53,7 @@
 							<li><a href="Q&A.html">Q&A</a></li>
 						</ul>
 					</li>
-					<li><a href="Details.html">活動内容<span>Details</span></a>
+					<li class="current"><a href="Details.html">活動内容<span>Details</span></a>
 						<ul class="ddmenu">
 							<li><a href="Details1.html">活動紹介</a></li>
 							<li><a href="Details2.html">活動記録</a></li>
@@ -84,56 +84,18 @@
 	<div id="main">
 
 				<section>
+					<ul class="menu">
+						<li class="current"><a href="Details.html">活動内容</a></li>
+						<li><a href="Details1.html">活動紹介</a></li>
+						<li><a href="Details2.html">活動記録</a></li>
+					</ul>
 					<h2>こんな方にお勧め！！</h2>
+					
 					<div class="hero-split">
 						<div class="hero-left">
-							<img src="images/2025-Tukubasan.jpg" alt="活動写真">
-						</div>
-						<div class="hero-right">
-							<span class="big-word">自然体験</span>
+							<img src="images/introduce.png" alt="活動写真">
 						</div>
     				</div>
-					<div class="text">
-						<p>「ワンダーフォーゲル（Wandervogel）」とは、ドイツ語で<strong>「渡り鳥」</strong>を意味する言葉。
-							山や自然の中を自分の足で歩き、仲間と一緒に景色や発見を分かち合う――
-							そんな旅のスタイルを大切にしてきた、100年以上の歴史を持つ野外活動の文化です。</p>
-
-						<p>私たち千葉工業大学ワンダーフォーゲル同好会は、<strong>軽登山、ハイキング</strong>などをメインに、
-							季節や仲間の興味に合わせてさまざまな活動をしてます。
-							経験や体力に自信がなくても大丈夫です！<strong>初心者から山を始めた部員がほとんど</strong>で、
-							仲間と楽しい時間を過ごせます</p>
-
-						<p>頂上から見渡す景色、汗をかいた後の達成感、焚き火を囲んでの何気ない会話――
-							普段の大学生活だけでは出会えない体験が、ここにはあります。
-							自然が好きな人も、まだ登山をしたことがない人も、ぜひ一度、私たちと一緒に外に出てみませんか？</p>
-
-						<h4>キーワード</h4>
-						<ul>
-							<li>軽登山
-							<li>ハイキング
-							<li>アウトドア
-							<li>自然体験
-							<li>仲間づくり
-						</ul>
-					</div>
-				</section>
-
-				<section id="new">
-					<h2>ニュース</h2>
-					<dl>
-						<dt>2025/9/1,2</dt>
-						<dd>無事夏合宿が終わり、より強い絆が結ばれました<span class="newicon">NEW</span></dd>
-						<dt>2025/2/9,10</dt>
-						<dd>無事冬合宿を終えて、新しい代への移り変わりを感じました</dd>
-						<dt>2025/4/25</dt>
-						<dd>新歓参加人数112人,合計部員数176人へなりました。</dd>
-					</dl>
-					<p class="r">&raquo;&nbsp;<a href="Details2.html">過去の活動</a></p>
-				</section>
-
-				
-
-			</div>
 			<!--/#main-->
 
 			
@@ -171,39 +133,39 @@
 		</div>
 
 	</footer>
-
 <!--ページの上部に戻る「↑」ボタン-->
 <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
 
-				<!-- メニュー開閉ボタン -->
-				<div id="menubar_hdr" class="close"></div>
+<!-- メニュー開閉ボタン -->
+<div id="menubar_hdr" class="close"></div>
 
-				<!-- メニュー本体（初期状態で非表示）-->
-				<nav id="menubar-s" style="display: none;">
-					<ul>
-						<li><a href="#">メニュー1</a></li>
-						<li><a href="#">メニュー2</a></li>
-					</ul>
-				</nav>
+<!-- メニュー本体（初期状態で非表示）-->
+<nav id="menubar-s" style="display: none;">
+	<ul>
+		<li><a href="#">メニュー1</a></li>
+		<li><a href="#">メニュー2</a></li>
+	</ul>
+</nav>
 
-				<!-- 開閉スクリプト -->
-				<script>
-					document.addEventListener("DOMContentLoaded", function () {
-						const trigger = document.getElementById("menubar_hdr");
-						const menu = document.getElementById("menubar-s");
+<!-- 開閉スクリプト -->
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const trigger = document.getElementById("menubar_hdr");
+		const menu = document.getElementById("menubar-s");
 
-						menu.style.display = "none"; // 念のため初期化
+		menu.style.display = "none"; // 念のため初期化
 
-						trigger.addEventListener("click", function () {
-							if (window.innerWidth <= 900) {
-								const isOpen = menu.style.display === "block";
-								menu.style.display = isOpen ? "none" : "block";
-								trigger.classList.toggle("open", !isOpen);
-								trigger.classList.toggle("close", isOpen);
-							}
-						});
-					});
-				</script>
+		trigger.addEventListener("click", function () {
+			if (window.innerWidth <= 900) {
+				const isOpen = menu.style.display === "block";
+				menu.style.display = isOpen ? "none" : "block";
+				trigger.classList.toggle("open", !isOpen);
+				trigger.classList.toggle("close", isOpen);
+			}
+		});
+	});
+</script>
 
 </body>
+
 </html>
