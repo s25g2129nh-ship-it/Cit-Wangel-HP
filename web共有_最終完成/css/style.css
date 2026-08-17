@@ -1434,3 +1434,10 @@ footer address .tel {
         max-width: 360px;
     }
 }
+
+/* カード全体を囲むコンテナのCSS */
+.link-container { /* 実際のクラス名に合わせてください */
+  display: flex;
+  justify-content: center; /* カードを中央に寄せる */
+  align-items: flex-start; /* すべてのカードの上端を揃える */
+}
