@@ -1427,10 +1427,11 @@ footer address .tel {
     }
 }
 
-/* カード全体を囲むコンテナのCSS */
-.link-container { /* 実際のクラス名に合わせてください */
-  display: flex;
-  justify-content: center; /* カードを中央に寄せる */
-  align-items: flex-start; /* すべてのカードの上端を揃える */
-  flex-wrap: wrap; /* スマホ表示時は折り返す */
+/* 全体コンテナ（3枚横並びレイアウト） */
+.link-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 10px;
+    flex-wrap: wrap; /* スマホ表示時は折り返す */
 }
