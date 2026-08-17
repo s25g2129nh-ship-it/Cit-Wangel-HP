@@ -1432,4 +1432,5 @@ footer address .tel {
   display: flex;
   justify-content: center; /* カードを中央に寄せる */
   align-items: flex-start; /* すべてのカードの上端を揃える */
+  flex-wrap: wrap; /* スマホ表示時は折り返す */
 }
