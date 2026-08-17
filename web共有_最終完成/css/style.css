@@ -1400,24 +1400,6 @@ footer address .tel {
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* 各カードごとのボタンカラー調整 */
-.btn-cit {
-    background-color: #e6f0fa;
-    border-color: #c2d8ed;
-    color: #1e3a5f;
-}
-
-.btn-pink-accent {
-    background-color: #fae4e6;
-    border-color: #eec5c8;
-    color: #632228;
-}
-
-.btn-gold {
-    background-color: #f7f3e4;
-    border-color: #ebdcb9;
-    color: #5c4b18;
-}
 
 /* スマートフォン画面向け（縦並び・幅100%） */
 @media (max-width: 768px) {
