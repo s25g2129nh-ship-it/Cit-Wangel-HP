@@ -1290,6 +1290,11 @@ footer address .tel {
 	text-align: center;		/*中央揃え*/
 }
 
+.big-right {
+	font-size: 40px;		/*文字の大きさ。数字が大きいほどデカくなる*/
+	text-align: right;		/*右揃え*/
+}
+
 
 
 /* 各カードの共通スタイル */
@@ -1399,8 +1404,6 @@ footer address .tel {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
-
-
 /* スマートフォン画面向け（縦並び・幅100%） */
 @media (max-width: 768px) {
     .link-card {
