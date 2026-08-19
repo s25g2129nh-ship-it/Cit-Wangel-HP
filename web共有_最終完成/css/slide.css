@@ -1,33 +1,85 @@
 @charset "utf-8";
 
 
-/*CSSスライドショー設定
+/*CSSスライドショー設定（9枚を均等に切り替える）
 ---------------------------------------------------------------------------*/
+/*０枚目*/
+@keyframes slide0 {
+	0%    {opacity: 1;}
+	9.1%  {opacity: 1;}
+	11.1% {opacity: 0;}
+	100%  {opacity: 0;}
+}
 /*１枚目*/
 @keyframes slide1 {
-	0% {opacity: 0;}
-	10% {opacity: 1;}
-	30% {opacity: 1;}
-	40% {opacity: 0;}
-	100% {opacity: 0;}
+	0%     {opacity: 0;}
+	11.1%  {opacity: 0;}
+	13.1%  {opacity: 1;}
+	20.2%  {opacity: 1;}
+	22.2%  {opacity: 0;}
+	100%   {opacity: 0;}
 }
 /*２枚目*/
 @keyframes slide2 {
-	0% {opacity: 0;}
-	20% {opacity: 0;}
-	30% {opacity: 1;}
-	60% {opacity: 1;}
-	70% {opacity: 0;}
-	100% {opacity: 0;}
+	0%     {opacity: 0;}
+	22.2%  {opacity: 0;}
+	24.2%  {opacity: 1;}
+	31.3%  {opacity: 1;}
+	33.3%  {opacity: 0;}
+	100%   {opacity: 0;}
 }
 /*３枚目*/
 @keyframes slide3 {
-	0% {opacity: 0;}
-	50% {opacity: 0;}
-	60% {opacity: 1;}
-	85% {opacity: 1;}
-	95% {opacity: 0;}
-	100% {opacity: 0;}
+	0%     {opacity: 0;}
+	33.3%  {opacity: 0;}
+	35.3%  {opacity: 1;}
+	42.4%  {opacity: 1;}
+	44.4%  {opacity: 0;}
+	100%   {opacity: 0;}
+}
+/*４枚目*/
+@keyframes slide4 {
+	0%     {opacity: 0;}
+	44.4%  {opacity: 0;}
+	46.4%  {opacity: 1;}
+	53.6%  {opacity: 1;}
+	55.6%  {opacity: 0;}
+	100%   {opacity: 0;}
+}
+/*５枚目*/
+@keyframes slide5 {
+	0%     {opacity: 0;}
+	55.6%  {opacity: 0;}
+	57.6%  {opacity: 1;}
+	64.7%  {opacity: 1;}
+	66.7%  {opacity: 0;}
+	100%   {opacity: 0;}
+}
+/*６枚目*/
+@keyframes slide6 {
+	0%     {opacity: 0;}
+	66.7%  {opacity: 0;}
+	68.7%  {opacity: 1;}
+	75.8%  {opacity: 1;}
+	77.8%  {opacity: 0;}
+	100%   {opacity: 0;}
+}
+/*７枚目（新規追加）*/
+@keyframes slide7 {
+	0%     {opacity: 0;}
+	77.8%  {opacity: 0;}
+	79.8%  {opacity: 1;}
+	86.9%  {opacity: 1;}
+	88.9%  {opacity: 0;}
+	100%   {opacity: 0;}
+}
+/*８枚目（新規追加）*/
+@keyframes slide8 {
+	0%     {opacity: 0;}
+	88.9%  {opacity: 0;}
+	90.9%  {opacity: 1;}
+	98%    {opacity: 1;}
+	100%   {opacity: 0;}
 }
 
 /*mainimg
@@ -41,7 +93,7 @@
 	overflow: hidden;		/*はみ出た部分を隠す*/
 	border-radius: 10px;
 }
-/*４枚共通：枠いっぱいに自動トリミングして表示*/
+/*９枚共通：枠いっぱいに自動トリミングして表示*/
 #mainimg img {
 	position: absolute;
 	top: 0;
@@ -51,26 +103,46 @@
 	object-fit: cover;		/*ここが自動トリミングの肝。縦長でも横長でも枠を埋めるように切り取ってくれる*/
 	border-radius: 10px;
 }
-/*土台画像*/
-.slide0 {
-	position: absolute;
-}
-/*３枚画像の共通設定*/
-.slide1,.slide2,.slide3 {
-	animation-duration: 12s;			/*実行する時間。「s」は秒の事。*/
-	animation-iteration-count:infinite;	/*実行する回数。「infinite」は無限に繰り返す意味。*/
+/*９枚共通のアニメーション設定（※クラスの区切りは必ずカンマ「,」にすること）*/
+.slide0,.slide1,.slide2,.slide3,.slide4,.slide5,.slide6,.slide7,.slide8 {
+	animation-duration: 36s;			/*1周にかかる時間。9枚×約4秒。*/
+	animation-iteration-count: infinite;	/*無限に繰り返す*/
 	animation-fill-mode: both;
 	animation-delay: 2s;
 }
+/*０枚目*/
+.slide0 {
+	animation-name: slide0;		/*上で設定しているキーフレーム（keyframes）の名前*/
+}
 /*１枚目*/
 .slide1 {
-	animation-name: slide1;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide1;
 }
 /*２枚目*/
 .slide2 {
-	animation-name: slide2;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide2;
 }
 /*３枚目*/
 .slide3 {
-	animation-name: slide3;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide3;
+}
+/*４枚目*/
+.slide4 {
+	animation-name: slide4;
+}
+/*５枚目*/
+.slide5 {
+	animation-name: slide5;
+}
+/*６枚目*/
+.slide6 {
+	animation-name: slide6;
+}
+/*７枚目（新規追加）*/
+.slide7 {
+	animation-name: slide7;
+}
+/*８枚目（新規追加）*/
+.slide8 {
+	animation-name: slide8;
 }
