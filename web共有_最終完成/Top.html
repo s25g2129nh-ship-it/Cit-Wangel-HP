@@ -185,16 +185,37 @@
 	</footer>
 
 	<!--ページの上部に戻る「↑」ボタン-->
-	<!-- <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p> -->
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
 
-	<!--メニュー開閉ボタン-->
-	<div id="menubar_hdr" class="close"></div>
-	<!--メニューの開閉処理条件設定　900px以下-->
-	<script>
-		if (OCwindowWidth() <= 900) {
-			open_close("menubar_hdr", "menubar-s");
-		}
-	</script>
+<!-- メニュー開閉ボタン -->
+<div id="menubar_hdr" class="close"></div>
+
+<!-- メニュー本体（初期状態で非表示）-->
+<nav id="menubar-s" style="display: none;">
+	<ul>
+		<li><a href="#">メニュー1</a></li>
+		<li><a href="#">メニュー2</a></li>
+	</ul>
+</nav>
+
+<!-- 開閉スクリプト -->
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const trigger = document.getElementById("menubar_hdr");
+		const menu = document.getElementById("menubar-s");
+
+		menu.style.display = "none"; // 念のため初期化
+
+		trigger.addEventListener("click", function () {
+			if (window.innerWidth <= 900) {
+				const isOpen = menu.style.display === "block";
+				menu.style.display = isOpen ? "none" : "block";
+				trigger.classList.toggle("open", !isOpen);
+				trigger.classList.toggle("close", isOpen);
+			}
+		});
+	});
+</script>
 
 </body>
 
