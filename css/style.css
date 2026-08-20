@@ -1420,3 +1420,105 @@ footer address .tel {
     padding: 20px 10px;
     flex-wrap: wrap; /* スマホ表示時は折り返す */
 }
+
+
+/*「はじめに」ページ（First.html）専用スタイル
+---------------------------------------------------------------------------*/
+/*雰囲気を紹介する2枚のカード*/
+.info-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	margin: 20px 0;
+}
+.info-card {
+	flex: 1;
+	min-width: 220px;
+	background: #f2f8f5;
+	border-radius: 10px;
+	padding: 18px;
+}
+.info-card h4 {
+	color: #2e8b57;
+	margin-bottom: 8px;
+}
+/*幹部一同の署名*/
+.wangel-message-author {
+	text-align: right;
+	font-weight: bold;
+	color: #5b9f53;
+	margin-top: 10px;
+}
+/*集合写真ブロック*/
+.hero-photo-block {
+	margin: 20px 0;
+	text-align: center;
+}
+.hero-photo-block img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+.hero-photo-caption {
+	font-size: 0.9em;
+	color: #666;
+	margin-top: 8px;
+}
+@media screen and (max-width:900px){
+	.info-card {
+		min-width: 100%;
+	}
+}
+
+
+/*「ファーストメッセージ」ページ（Message.html）専用スタイル
+---------------------------------------------------------------------------*/
+/*主将の写真（右回り込み）*/
+.staff-photo-wrap {
+	float: right;
+	margin: 0 0 15px 20px;
+	text-align: center;
+}
+.staff-photo-wrap img {
+	width: 220px;
+	max-width: 100%;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.staff-photo-caption {
+	font-size: 0.85rem;
+	color: #666;
+	margin-top: 6px;
+	margin-bottom: 0;
+}
+/*メッセージ本文の緑ボックス*/
+.message-box {
+	background-color: #f2f8f5;
+	border-left: 5px solid #2e8b57;
+	padding: 20px;
+	border-radius: 6px;
+	margin-bottom: 25px;
+}
+.message-box .message-greeting {
+	font-weight: bold;
+	font-size: 1.05rem;
+	color: #2e8b57;
+}
+.message-box p {
+	line-height: 1.7;
+	color: #333;
+}
+.message-box .message-signature {
+	text-align: right;
+	font-weight: bold;
+	color: #1e5631;
+	margin-bottom: 0;
+}
+@media screen and (max-width:900px){
+	.staff-photo-wrap {
+		float: none;
+		margin: 0 auto 15px;
+	}
+}

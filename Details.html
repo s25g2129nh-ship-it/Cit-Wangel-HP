@@ -6,8 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>ワンダーフォーゲル同好会</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="今井順一の研究室紹介">	<!-- Googleなどの検索結果に「サイト名の下に出る紹介文」として使われます -->
-	<meta name="keywords" content="千葉工業大学,研究室,今井順一,機械学習">	<!--このページに関連するキーワードです。昔は検索順位に影響していましたが、今のGoogleはほぼ見ていないと言われています -->
+	<meta name="description" content="ワンダーフォーゲル同好会">	<!-- Googleなどの検索結果に「サイト名の下に出る紹介文」として使われます -->
+	<meta name="keywords" content="千葉工業大学,サークル,ワンダーフォーゲル,同好会">	<!--このページに関連するキーワードです。昔は検索順位に影響していましたが、今のGoogleはほぼ見ていないと言われています -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="alternate stylesheet" href="css/change.css" title="change">
 	<link rel="stylesheet" href="css/test.css">
@@ -18,7 +18,7 @@
 	<script src="js/styleswitcher.js"></script>
 </head>
 
-<body>
+<body class="c1"> 
 
 	<div id="container">
 		<header>
@@ -45,7 +45,7 @@
 		<div class="nav-fix-pos">
 			<nav id="menubar">
 				<ul>
-					<li><a href="Top.html">トップページ<span>Top</span></a></li>
+					<li ><a href="Top.html">トップページ<span>Top</span></a></li>
 					<li><a href="first.html">はじめに<span>Start</span></a>
 						<ul class="ddmenu">
 							<li><a href="Message.html">ファーストメッセージ</a></li>
@@ -74,58 +74,34 @@
 			</ul>
 		</nav>
 
-		<div id="contents">
+<div id="contents">
 
-			<ul class="nav">
-				<li><a href="top.html">トップページ</a></li>
-				<li><a href="Details.html">活動内容</a></li>
-				<li>活動紹介</li>
-			</ul>
+		<ul class="nav">
+			<li><a href="Top.html">トップページ</a></li>
+			<li>活動内容</li>
+		</ul>
 
-
-
-
-			<div id="main">
+	<div id="main">
 
 				<section>
-					<h2>主な活動内容</h2>
-						<p class="big-text">
-							軽登山・ハイキング
-						</p>
-						<p class="big-right">(関東圏)</p>
+					<ul class="menu">
+						<li class="current"><a href="Details.html">活動内容</a></li>
+						<li><a href="Details1.html">活動紹介</a></li>
+						<li><a href="Details2.html">活動記録</a></li>
+					</ul>
+					<h2>こんな方にお勧め！！</h2>
+					
+					<div class="hero-split">
+						<div class="hero-left">
+							<img src="images/introduce.png" alt="活動写真">
+						</div>
+    				</div>
 
-					<h2>活動頻度</h2>
-						<p class="big-text">
-							月１
-						</p>
-					<h2>🏕️合宿</h2>
-						<p class="big-text">
-							夏・冬
-						</p>			
-					<h2>気になった方へ</h2>
-						<p>私たち千葉工業大学ワンダーフォーゲル同好会は<strong>安全第一</strong>を最優先で活動してます</p>
-
-						<p><strong>軽登山、ハイキング</strong>などをメインに、
-							季節や仲間の興味に合わせてさまざまな活動をしてます。
-							経験や体力に自信がなくても大丈夫です！<strong>初心者から山を始めた部員がほとんど</strong>で、
-							<strong>仲間と楽しい時間</strong>を過ごせます</p>
-
-						<p>もしご質問あれば→<strong><a href="Q&A.html">Q&A</a></strong></p>
-
-						<p>もしご興味あれば新歓への参加のご検討お願いします！</p>
-					</div>
 				</section>
 
-			</div>
 			<!--/#main-->
 
-			<div id="sub">
-
-				<nav class="box1">
-					<img src="images/climb.jpg">
-				</nav>
-
-			</div>
+			
 			<!--/#sub-->
 
 		</div>
@@ -133,10 +109,9 @@
 
 	</div>
 	<!--/#container-->
+	</div>
 
-
-
-<footer>
+	<footer>
 
 		<div class="inner">
 
@@ -158,44 +133,42 @@
 
 		<div id="copyright">
 			<small>Copyright (C) Wandervogel Club. All Rights Reserved.</small>
-			<p>作成者：25G2129 南翔太</p>
 		</div>
 
 	</footer>
-
 <!--ページの上部に戻る「↑」ボタン-->
 <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
 
-				<!-- メニュー開閉ボタン -->
-				<div id="menubar_hdr" class="close"></div>
+<!-- メニュー開閉ボタン -->
+<div id="menubar_hdr" class="close"></div>
 
-				<!-- メニュー本体（初期状態で非表示）-->
-				<nav id="menubar-s" style="display: none;">
-					<ul>
-						<li><a href="#">メニュー1</a></li>
-						<li><a href="#">メニュー2</a></li>
-					</ul>
-				</nav>
+<!-- メニュー本体（初期状態で非表示）-->
+<nav id="menubar-s" style="display: none;">
+	<ul>
+		<li><a href="#">メニュー1</a></li>
+		<li><a href="#">メニュー2</a></li>
+	</ul>
+</nav>
 
-				<!-- 開閉スクリプト -->
-				<script>
-					document.addEventListener("DOMContentLoaded", function () {
-						const trigger = document.getElementById("menubar_hdr");
-						const menu = document.getElementById("menubar-s");
+<!-- 開閉スクリプト -->
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const trigger = document.getElementById("menubar_hdr");
+		const menu = document.getElementById("menubar-s");
 
-						menu.style.display = "none"; // 念のため初期化
+		menu.style.display = "none"; // 念のため初期化
 
-						trigger.addEventListener("click", function () {
-							if (window.innerWidth <= 900) {
-								const isOpen = menu.style.display === "block";
-								menu.style.display = isOpen ? "none" : "block";
-								trigger.classList.toggle("open", !isOpen);
-								trigger.classList.toggle("close", isOpen);
-							}
-						});
-					});
-				</script>
+		trigger.addEventListener("click", function () {
+			if (window.innerWidth <= 900) {
+				const isOpen = menu.style.display === "block";
+				menu.style.display = isOpen ? "none" : "block";
+				trigger.classList.toggle("open", !isOpen);
+				trigger.classList.toggle("close", isOpen);
+			}
+		});
+	});
+</script>
 
 </body>
-</html>
 
+</html>
