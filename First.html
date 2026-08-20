@@ -72,68 +72,61 @@
 			</ul>
 		</nav>
 
-	<div id="contents">
+		<div id="contents">
 
-		<ul class="nav">
-        <li><a href="Top.html">トップページ</a></li>
-        <li>はじめに</li>
-    </ul>
+			<ul class="nav">
+				<li><a href="Top.html">トップページ</a></li>
+				<li>はじめに</li>
+			</ul>
 
-    <div id="main">
-        <section>
-			<ul class="menu">
+			<div id="main">
+
+				<section>
+					<ul class="menu">
 						<li class="current"><a href="First.html">はじめに</a></li>
 						<li><a href="Message.html">ファーストメッセージ</a></li>
 						<li><a href="Q&A.html">Q＆A</a></li>
-			</ul>
+					</ul>
 
-            <h2>はじめに</h2>
+					<h2>はじめに</h2>
 
-				<dl class="faq">
+					<div class="text">
+						<p>こんにちは！千葉工業大学ワンダーフォーゲル同好会です！</p>
+						<p>私たちは「自然を心から楽しむこと」をモットーに、登山、キャンプ、ハイキングなど様々なアウトドア活動を行っています。
+							初心者から経験者まで、自分のペースで楽しめるのが私たちの魅力です。大学生活で新しい挑戦をしたい方、最高の仲間と素晴らしい絶景を見に行きましょう！</p>
 
-					<p>こんにちは！千葉工業大学ワンダーフォーゲル同好会です！</p>
-					<p>私たちは「自然を心から楽しむこと」をモットーに、登山、キャンプ、ハイキングなど様々なアウトドア活動を行っています。
-						初心者から経験者まで、自分のペースで楽しめるのが私たちの魅力です。大学生活で新しい挑戦をしたい方、最高の仲間と素晴らしい絶景を見に行きましょう！<p>
-							
-			<h3>千葉工のワンゲルってどんな雰囲気？</h3>
+						<h3>千葉工のワンゲルってどんな雰囲気？</h3>
 
-					<h4>学年・学部を超えた仲間</h4>
-					<p>学科や学年の垣根がなく、アットホームな雰囲気で楽しく活動しています。</p>
-					<h4>自由な参加スタイル</h4>
-					<p>自分のスケジュールや体力に合わせて山行に参加できます。好きなタイミングで参加してね！</p>
-									<p class="wangel-message-author">—— 千葉工業大学ワンダーフォーゲル同好会 幹部一同</p>
-	</div>	
-					
+						<h4>学年・学部を超えた仲間</h4>
+						<p>学科や学年の垣根がなく、アットホームな雰囲気で楽しく活動しています。</p>
 
+						<h4>自由な参加スタイル</h4>
+						<p>自分のスケジュールや体力に合わせて山行に参加できます。好きなタイミングで参加してね！</p>
 
-<div style="margin: 20px 0; text-align: center;">
-    <img src="images/kanbu-photo.jpg" alt="高尾山での集合写真" style="width: 100%; max-width: 100%; height: auto; border-radius: 8px;">
-    <p style="font-size: 0.9em; color: #666; margin-top: 8px;"></p>
-</div>					
-				</dl>
+						<p class="wangel-message-author">—— 千葉工業大学ワンダーフォーゲル同好会 幹部一同</p>
+					</div>
 
-			</section>
+					<div class="hero-photo-block">
+						<img src="images/kanbu-photo.jpg" alt="高尾山での集合写真">
+					</div>
 
-		</div>
-		<!--/#main-->
+				</section>
 
-	</div>
+			</div>
 			<!--/#main-->
 
 			<div id="sub">
-
 				<nav class="box1">
 					<img src="images/2025-Tukubasan.jpg">
 				</nav>
-
 			</div>
-		<!--/#sub-->
+			<!--/#sub-->
+
+		</div>
+		<!--/#contents-->
 
 	</div>
-	<!--/#contents-->
-
-</div>
-<!--/#container-->
+	<!--/#container-->
 
 	<footer>
 
@@ -161,38 +154,17 @@
 
 	</footer>
 
-<!--ページの上部に戻る「↑」ボタン-->
-<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+	<!--ページの上部に戻る「↑」ボタン-->
+	<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
 
-<!-- メニュー開閉ボタン -->
-<div id="menubar_hdr" class="close"></div>
-
-<!-- メニュー本体（初期状態で非表示）-->
-<nav id="menubar-s" style="display: none;">
-	<ul>
-		<li><a href="#">メニュー1</a></li>
-		<li><a href="#">メニュー2</a></li>
-	</ul>
-</nav>
-
-<!-- 開閉スクリプト -->
-<script>
-	document.addEventListener("DOMContentLoaded", function () {
-		const trigger = document.getElementById("menubar_hdr");
-		const menu = document.getElementById("menubar-s");
-
-		menu.style.display = "none"; // 念のため初期化
-
-		trigger.addEventListener("click", function () {
-			if (window.innerWidth <= 900) {
-				const isOpen = menu.style.display === "block";
-				menu.style.display = isOpen ? "none" : "block";
-				trigger.classList.toggle("open", !isOpen);
-				trigger.classList.toggle("close", isOpen);
-			}
-		});
-	});
-</script>
+	<!--メニュー開閉ボタン-->
+	<div id="menubar_hdr" class="close"></div>
+	<!--メニューの開閉処理条件設定　900px以下-->
+	<script>
+		if (OCwindowWidth() <= 900) {
+			open_close("menubar_hdr", "menubar-s");
+		}
+	</script>
 
 </body>
 
